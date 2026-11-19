@@ -30,8 +30,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint
       run: |
-         ruff check .
-         ruff format . --fix
+         ruff check .--fix
+         ruff format . 
     - name: Test with pytest
       run: |
         pytest
